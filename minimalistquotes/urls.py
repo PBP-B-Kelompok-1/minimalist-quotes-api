@@ -16,6 +16,9 @@ Including another URLconf
 """
 
 from django.urls import path
+from . import views
 
 urlpatterns = [
+    path("", views.get_quotes_all_json, name="all"),
+    path("random", views.get_quotes_random_json, name="random")
 ]
